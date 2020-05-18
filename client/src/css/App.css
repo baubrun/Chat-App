@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap');
+
+body {
+    background-color: #020202c9;
+    font-family: 'Roboto', sans-serif;
+}
+
+/*===========
+Home page
+=============*/
+
+
+.button {
+    border: none;
+    background: #E26D5C;
+    color: whitesmoke !important;
+    border-radius: 5px;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    width: 100%;
+}
+
+.join-chat {
+    border-radius: 0;
+    padding: 15px 20px;
+    text-align: center;
+    width: 60%;
+}
+
+.join-chat::placeholder {
+    font-size: 1.2rem;
+}
+
+.join-chat input {
+    border-color: #E26D5C;
+    font-size: 1.2em;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+
+/*==============
+Chat Container
+===============*/
+
+.app-title {
+    color: whitesmoke;
+    font-family: 'Raleway', sans-serif;
+    font-size: 3em;
+    letter-spacing: 1PX;
+}
+
+
+.chat-container,
+.join-chat-container
+{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+}
+
+.container {
+    background-color: #E26D5C;
+    border: 2px solid #E26D5C;
+    display: flex;
+    height: 70%;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 70%;
+}
+
+
+.main {
+    background-color: whitesmoke;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    height: 60%;
+    width: 100%;
+}
+
+.room-title {
+    font-size: 1.5rem;
+    margin-left: 10px;
+    text-transform: uppercase;
+}
+
+
+.users-icon {
+    color: whitesmoke;
+}
+
+
+/*==============
+Header
+===============*/
+
+
+.header {
+    align-items: center;
+    display: flex;
+    height: 60px;
+    width: 100%;
+}
+
+.header i {
+    align-items: center;
+    color: #E26D5C;
+}
+
+.chat-icon {
+    color: whitesmoke !important;
+    margin-left: 5px;
+}
+
+.header-left {
+    background-color: #EE9986;
+    display: flex;
+    align-items: center;
+    color: whitesmoke;
+    height: 100%;
+    width: 80%;
+}
+
+.header-right {
+    background-color: whitesmoke;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    justify-content: center;
+    padding: 0 10px;
+    width: 20%;
+}
+
+/*==============
+Sidebar
+===============*/
+.sidebar {
+    background-color: #EE9986;
+    color: whitesmoke;
+    text-align: center;
+    height: 100%;
+}
+
+
+.sidebar-content {
+    margin-top: 10px;
+}
+
+
+
+/*==============
+Messages
+===============*/
+
+
+.messages {
+    flex: auto;
+    overflow: auto;
+    padding: 5% 0;
+}
+
+.msg-bubble {
+    background: #F3F3F3;
+    border-radius: 20px;
+    padding: 5px 20px;
+    color: white;
+    display: inline-block;
+    max-width: 80%;
+}
+
+.current-user {
+    background: #E26D5C;
+}
+
+.msg-text {
+    float: left;
+    font-size: 1.1em;
+    letter-spacing: 0;
+    word-wrap: break-word;
+    width: 100%;
+}
+
+.msg-text img {
+    vertical-align: middle;
+}
+
+.msg-container {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 5%;
+    margin-top: 3px;
+}
+
+.msg-sent {
+    display: flex;
+    align-items: center;
+    font-family: Helvetica;
+    color: #828282;
+    letter-spacing: 0.3px;
+}
+
+.msg-left {
+    justify-content: flex-start;
+}
+
+.msg-right {
+    justify-content: flex-end;
+}
+
+.msg-current-color {
+    color: white;
+}
+
+.msg-other-color {
+    color: #353535;
+}
+
+.pl-10 {
+    padding-left: 10px;
+}
+
+.pr-10 {
+    padding-right: 10px;
+}
+
+.other-user {
+    border: 1px solid #E26D5C;
+}
+
+
+
+/*==============
+User Input
+===============*/
+
+.form {
+    display: flex;
+    border-top: 2px solid #E26D5C;
+    width: 100%;
+}
+
+.form input {
+    border: none;
+    font-size: 1.2em;
+    padding: 20px;
+    width: 85%;
+}
+
+.send-btn {
+    background-color: #EE9986;
+    border: none;
+    color: whitesmoke;
+    cursor: pointer;
+    width: 15%;
+}
+
+
