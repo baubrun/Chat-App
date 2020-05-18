@@ -4,4 +4,4 @@ Technologies: Express/Node.js/React/Socket.IO
 
 Demo: https://youtu.be/BT1m2HGllGw
 
-npm run start in client and in server directory to start project
+To run project: cd into server directory and enter npm run dev
