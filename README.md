@@ -1,6 +1,6 @@
 ## Chat App 
 
-Technologies: Express/Node.js/React/Socket.IO
+Technologies: Enzyme, Express, Jest, Node.js, React, Socket.io 
 
 Demo: https://youtu.be/BT1m2HGllGw
 

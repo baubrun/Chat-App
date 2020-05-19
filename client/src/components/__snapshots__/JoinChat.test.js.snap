@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[` 1`] = `
+<div
+  className="join-chat-container"
+>
+  <h1
+    className="app-title"
+  >
+    ON PARLE
+  </h1>
+  <form
+    className="join-chat"
+  >
+    <div>
+      <input
+        className="join-chat"
+        id="name-input"
+        onChange={[Function]}
+        placeholder="Name"
+        type="text"
+        value=""
+      />
+    </div>
+    <div>
+      <input
+        className="join-chat mt-20"
+        id="chatRoom-input"
+        onChange={[Function]}
+        placeholder="Chat Room"
+        type="text"
+        value=""
+      />
+    </div>
+    <Link
+      onClick={[Function]}
+      to="/chat?name=&chatRoom="
+    >
+      <button
+        className="join-chat button mt-20"
+        type="submit"
+      >
+        Join Chat
+      </button>
+    </Link>
+  </form>
+</div>
+`;

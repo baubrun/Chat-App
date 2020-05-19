@@ -12,17 +12,21 @@ const JoinChat = () => {
         <div>
           <input
             className="join-chat"
+            id="name-input"
             onChange={(event) => setName(event.target.value)}
             placeholder="Name"
             type="text"
+            value={name}
           />
         </div>
         <div>
           <input
             className="join-chat mt-20"
+            id="chatRoom-input"
             onChange={(event) => setChatRoom(event.target.value)}
             placeholder="Chat Room"
             type="text"
+            value={chatRoom}
           />
         </div>
         <Link
