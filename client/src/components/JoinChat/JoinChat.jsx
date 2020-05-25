@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import "./JoinChat.css"
 
 const JoinChat = () => {
   const [name, setName] = useState("");

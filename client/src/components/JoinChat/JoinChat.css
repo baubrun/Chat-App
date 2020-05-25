@@ -1,0 +1,46 @@
+.button {
+    border: none;
+    background: #E26D5C;
+    color: whitesmoke !important;
+    border-radius: 5px;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    width: 100%;
+}
+
+
+.joinChat {
+    border-radius: 0;
+    padding: 15px 20px;
+    text-align: center;
+    width: 60%;
+}
+/*  */
+
+.join-chat-container
+{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+}
+
+
+.join-chat::placeholder {
+    font-size: 1.2rem;
+}
+
+.join-chat input {
+    border-color: #E26D5C;
+    font-size: 1.2em;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+

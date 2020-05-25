@@ -1,0 +1,15 @@
+.sidebar {
+    background-color: #EE9986;
+    color: whitesmoke;
+    text-align: center;
+    height: 100%;
+}
+
+
+.sidebar-content {
+    margin-top: 10px;
+}
+
+.users-icon {
+    color: whitesmoke;
+}

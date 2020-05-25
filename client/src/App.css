@@ -11,7 +11,7 @@ Home page
 =============*/
 
 
-.button {
+/* .button {
     border: none;
     background: #E26D5C;
     color: whitesmoke !important;
@@ -22,52 +22,37 @@ Home page
     text-transform: uppercase;
     text-decoration: none;
     width: 100%;
-}
+} */
 
-.join-chat {
+/* .joinChat {
     border-radius: 0;
     padding: 15px 20px;
     text-align: center;
     width: 60%;
-}
+} */
 
-.join-chat::placeholder {
+/* .join-chat::placeholder {
     font-size: 1.2rem;
 }
 
 .join-chat input {
     border-color: #E26D5C;
     font-size: 1.2em;
-}
+} */
 
-.mt-20 {
+/* .mt-20 {
     margin-top: 20px;
-}
+} */
 
 
 /*==============
 Chat Container
 ===============*/
 
-.app-title {
-    color: whitesmoke;
-    font-family: 'Raleway', sans-serif;
-    font-size: 3em;
-    letter-spacing: 1PX;
-}
 
+/* .chat-container, */
 
-.chat-container,
-.join-chat-container
-{
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    justify-content: center;
-}
-
-.container {
+/* .container {
     background-color: #E26D5C;
     border: 2px solid #E26D5C;
     display: flex;
@@ -75,42 +60,42 @@ Chat Container
     justify-content: space-between;
     flex-direction: column;
     width: 70%;
-}
+} */
 
 
-.main {
+/* .main {
     background-color: whitesmoke;
     display: grid;
     grid-template-columns: 1fr 3fr;
     height: 60%;
     width: 100%;
-}
+} */
 
-.room-title {
+/* .room-title {
     font-size: 1.5rem;
     margin-left: 10px;
     text-transform: uppercase;
-}
+} */
 
 
-.users-icon {
+/* .users-icon {
     color: whitesmoke;
 }
-
+ */
 
 /*==============
 Header
 ===============*/
 
-
+/* 
 .header {
     align-items: center;
     display: flex;
     height: 60px;
     width: 100%;
-}
+} */
 
-.header i {
+/* .header i {
     align-items: center;
     color: #E26D5C;
 }
@@ -118,9 +103,9 @@ Header
 .chat-icon {
     color: whitesmoke !important;
     margin-left: 5px;
-}
+} */
 
-.header-left {
+/* .header-left {
     background-color: #EE9986;
     display: flex;
     align-items: center;
@@ -137,12 +122,12 @@ Header
     justify-content: center;
     padding: 0 10px;
     width: 20%;
-}
+} */
 
 /*==============
 Sidebar
 ===============*/
-.sidebar {
+/* .sidebar {
     background-color: #EE9986;
     color: whitesmoke;
     text-align: center;
@@ -153,7 +138,7 @@ Sidebar
 .sidebar-content {
     margin-top: 10px;
 }
-
+ */
 
 
 /*==============
@@ -161,13 +146,13 @@ Messages
 ===============*/
 
 
-.messages {
+/* .messages {
     flex: auto;
     overflow: auto;
     padding: 5% 0;
-}
+} */
 
-.msg-bubble {
+/* .msg-bubble {
     background: #F3F3F3;
     border-radius: 20px;
     padding: 5px 20px;
@@ -233,7 +218,7 @@ Messages
 
 .other-user {
     border: 1px solid #E26D5C;
-}
+} */
 
 
 
@@ -241,7 +226,7 @@ Messages
 User Input
 ===============*/
 
-.form {
+/* .form {
     display: flex;
     border-top: 2px solid #E26D5C;
     width: 100%;
@@ -252,14 +237,14 @@ User Input
     font-size: 1.2em;
     padding: 20px;
     width: 85%;
-}
+} */
 
-.send-btn {
+/* .send-btn {
     background-color: #EE9986;
     border: none;
     color: whitesmoke;
     cursor: pointer;
     width: 15%;
 }
-
+ */
 

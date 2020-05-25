@@ -1,4 +1,7 @@
 import React from "react";
+import "./Users.css"
+
+
 
 const Users = ({ users }) => {
   return (

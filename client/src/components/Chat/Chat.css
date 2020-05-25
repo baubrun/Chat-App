@@ -1,0 +1,35 @@
+.app-title {
+    color: whitesmoke;
+    font-family: 'Raleway', sans-serif;
+    font-size: 3em;
+    letter-spacing: 1PX;
+}
+
+
+.chat-container
+{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+}
+
+.container {
+    background-color: #E26D5C;
+    border: 2px solid #E26D5C;
+    display: flex;
+    height: 70%;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 70%;
+}
+
+
+.main {
+    background-color: whitesmoke;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    height: 60%;
+    width: 100%;
+}

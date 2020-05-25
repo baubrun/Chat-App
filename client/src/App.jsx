@@ -1,7 +1,9 @@
 import React from 'react'
 import {BrowserRouter, Route} from 'react-router-dom'
-import JoinChat from "./components/JoinChat"
-import Chat from "./components/Chat"
+import {JoinChat} from "./components/JoinChat"
+import {Chat} from "./components/Chat"
+import "./App.css"
+
 
 const App = () => {
     return (
