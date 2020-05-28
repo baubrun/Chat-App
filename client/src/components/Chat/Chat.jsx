@@ -2,12 +2,12 @@ import React from "react";
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import io from "socket.io-client";
-import {Header} from "../Header";
-import {UserInput} from "../UserInput";
-import {Messages} from "../Messages";
-import {Users} from "../Users";
-import "./Chat.css"
-
+import { Header } from "../Header";
+import { UserInput } from "../UserInput";
+import { Messages } from "../Messages";
+import { Users } from "../Users";
+import { Title } from "../Title";
+import "./Chat.css";
 
 let socket;
 
@@ -63,7 +63,7 @@ const Chat = () => {
 
   return (
     <div className="chat-container">
-      <div className="app-title">ON PARLE</div>
+      <Title title="ON PARLE" />
       <div className="container">
         <Header chatRoom={chatRoom} />
         <div className="main">

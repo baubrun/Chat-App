@@ -1,6 +1,6 @@
 import React from "react";
 import "./UserInput.css"
-
+import PropTypes from "prop-types";
 
 
 const UserInput = ({ message, sendMessage, setMessage }) => {
@@ -17,10 +17,16 @@ const UserInput = ({ message, sendMessage, setMessage }) => {
         value={message}
       />
       <button className="send-btn" onClick={(event) => sendMessage(event)}>
-      <i class="far fa-share-square fa-3x"></i>
+      <i className="far fa-share-square fa-3x"></i>
       </button>
     </form>
   );
 };
+
+UserInput.propTypes = {
+  message: PropTypes.string,
+  sendMessage: PropTypes.func,
+  setMessage: PropTypes.func
+}
 
 export default UserInput;

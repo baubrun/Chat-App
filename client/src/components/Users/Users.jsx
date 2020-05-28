@@ -1,5 +1,6 @@
 import React from "react";
 import "./Users.css"
+import PropTypes from "prop-types";
 
 
 
@@ -9,7 +10,7 @@ const Users = ({ users }) => {
       {users ? (
         <div>
           <div className="sidebar-content">
-            <i class="fas fa-user-friends fa-3x users-icon"></i>
+            <i className="fas fa-user-friends fa-3x users-icon"></i>
             <div>
               <h2>
                 {users.map(({ name }) => (
@@ -25,5 +26,9 @@ const Users = ({ users }) => {
     </div>
   );
 };
+
+Users.propTypes = {
+  name: PropTypes.array
+}
 
 export default Users;

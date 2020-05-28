@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./JoinChat.css"
+import {Title} from "../Title"
+
 
 const JoinChat = () => {
   const [name, setName] = useState("");
@@ -8,7 +10,7 @@ const JoinChat = () => {
 
   return (
     <div className="join-chat-container">
-      <h1 className="app-title">ON PARLE</h1>
+      <Title title="ON PARLE"/>
       <form className="join-chat">
         <div>
           <input
