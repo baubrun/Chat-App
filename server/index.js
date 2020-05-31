@@ -5,6 +5,10 @@ const app = express();
 const server = http.createServer(app);
 const io = socketio(server);
 const router = require("./router");
+const pino = require("pino")
+const expressPino = require("express-pino-logger")
+const logger = pino({level: process.env.LOG_LEVEL || "info"})
+const expressLogger = expressPino({ logger})
 const {
   addUser,
   getUser,
@@ -35,7 +39,7 @@ app.use(session({
   saveUninitialized: true,
 }))
 require("./config/passport")(app)
-
+app.use(expressLogger)
 
 
 /*==============
@@ -49,10 +53,11 @@ const db = mysql.createConnection({
 })
 
 db.connect((err) => {
+  const logMsg = "DB Connection."
   if (!err) {
-    console.log("\n Connected to DB!\n")
+    logger.info(logMsg)
   } else {
-    console.log("DB connection failed. " + JSON.stringify(err))
+    console.info(err, logMsg)
   }
 })
 
@@ -133,19 +138,39 @@ io.on("connection", (socket) => {
 
 
 /*==============
-GET
-===============*/
+GET===============*/
 
 app.get("/", upload.none(), (req, res) => {
   const {
     username,
     password
   } = req.body
+  // const logMsg = "INSERT INTO users"
+  // db.query("INSERT INTO users (username, password) values (?,?)", [username, password], (err, rows) => {
+  //   if (!err) {
+  //     logger.info(rows, logMsg)
+  //   } else {
+  //     logger.info(logMsg)
+  //   }
+  // })
+  console.log(username, password)
+})
+
+/*==============
+POST
+===============*/
+
+app.post("/", upload.none(), (req, res) => {
+  const {
+    username,
+    password
+  } = req.body
+  const logMsg = "INSERT INTO users"
   db.query("INSERT INTO users (username, password) values (?,?)", [username, password], (err, rows) => {
     if (!err) {
-      console.log(rows)
+      logger.info(rows, logMsg)
     } else {
-      console.log(err)
+      logger.info(logMsg)
     }
   })
 })
@@ -156,4 +181,4 @@ Server
 ===============*/
 const PORT = process.env.PORT || 4000;
 
-server.listen(PORT, () => console.log(`\nServer running on port ${PORT}!\n`));
+server.listen(PORT, () => logger.info(`Server running on port ${PORT}!\n`));
