@@ -1,15 +1,17 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap");
 .sidebar {
-    background-color: #EE9986;
-    color: whitesmoke;
-    text-align: center;
-    height: 100%;
+  background-color: #EE9986;
+  color: whitesmoke;
+  text-align: center;
+  height: 100%;
 }
 
-
 .sidebar-content {
-    margin-top: 10px;
+  margin-top: 10px;
 }
 
 .users-icon {
-    color: whitesmoke;
+  color: whitesmoke;
 }
+/*# sourceMappingURL=Users.css.map */

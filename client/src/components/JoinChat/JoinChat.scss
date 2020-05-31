@@ -1,0 +1,69 @@
+@import "../../scss/variables.scss";
+
+
+.chat-container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+}
+
+.container {
+    background-color: $color-dark-pink;
+    border: 2px solid $color-dark-pink;
+    display: flex;
+    height: 70%;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 70%;
+}
+
+
+
+
+.join-chat {
+    border-radius: 0;
+    padding: 15px 20px;
+    text-align: center;
+    width: 60%;
+
+    input {
+        border-color: $color-dark-pink;
+        font-size: 1.2em;
+    }
+
+    button {
+            border: none;
+            background: $color-dark-pink;
+            color: $color-white !important;
+            border-radius: 5px;
+            font-size: 1.2em;
+            font-weight: bold;
+            padding: 20px;
+            text-transform: uppercase;
+            text-decoration: none;
+    }
+}
+
+
+.join-chat-container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+}
+
+
+.join-chat::placeholder {
+    font-size: 1.2rem;
+}
+
+#join-chat-title {
+    color: $color-white;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}

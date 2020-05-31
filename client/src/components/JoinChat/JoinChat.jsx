@@ -1,17 +1,28 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import "./JoinChat.css"
 import {Title} from "../Title"
-
+import "./JoinChat.css"
+import {Form} from "../Form"
 
 const JoinChat = () => {
   const [name, setName] = useState("");
   const [chatRoom, setChatRoom] = useState("");
+  console.log(name, chatRoom);
 
   return (
     <div className="join-chat-container">
-      <Title title="ON PARLE"/>
-      <form className="join-chat">
+      <Title id="join-chat-title" text="ON PARLE"/>
+      <Form 
+      input1={name}
+      input2={chatRoom}
+      pHolder1="Name"
+      pHolder2="Chat Room"
+      setState1={setName}
+      setState2={setChatRoom}
+      text="Join Chat"
+      />
+
+
+      {/* <form className="join-chat">
         <div>
           <input
             className="join-chat"
@@ -38,7 +49,8 @@ const JoinChat = () => {
             Join Chat
           </button>
         </Link>
-      </form>
+      </form> */}
+      
     </div>
   );
 };

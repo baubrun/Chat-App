@@ -1,8 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
+import "./Title.css"
 
-const Title = ({title}) => {
-  return <h1 className="app-title">{title}</h1>;
+const Title = ({id, text}) => {
+  return <h1 id={id} className="title">{text}</h1>;
 };
 
 

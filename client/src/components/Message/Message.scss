@@ -1,0 +1,68 @@
+@import "../../scss/variables.scss";
+
+.msg-bubble {
+    background: $color-grey-white;
+    border-radius: 20px;
+    padding: 5px 20px;
+    color: $color-msg-color;
+    display: inline-block;
+    max-width: 80%;
+}
+
+.current-user {
+    background: $color-dark-pink;
+}
+
+.msg-text {
+    float: left;
+    font-size: 1.1em;
+    letter-spacing: 0;
+    word-wrap: break-word;
+    width: 100%;
+
+}
+
+
+.msg-container {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 5%;
+    margin-top: 3px;
+}
+
+.msg-sent {
+    display: flex;
+    align-items: center;
+    font-family: Helvetica;
+    color: $color-grey;
+    letter-spacing: 0.3px;
+}
+
+.msg-left {
+    justify-content: flex-start;
+    margin-bottom: 2px;
+}
+
+.msg-right {
+    justify-content: flex-end;
+}
+
+.msg-current-color {
+    color: $color-white;
+}
+
+.msg-other-color {
+    color: $color-msg-color;
+}
+
+.pl-10 {
+    padding-left: 10px;
+}
+
+.pr-10 {
+    padding-right: 10px;
+}
+
+.other-user {
+    border: 1px solid $color-dark-pink;
+}

@@ -1,7 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./Header.css"
 import PropTypes from "prop-types";
+import "./Header.css"
+
 
 const Header = ({ chatRoom }) => {
   return (

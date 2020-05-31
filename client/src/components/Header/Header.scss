@@ -1,0 +1,49 @@
+@import "../../scss/variables.scss";
+
+
+
+.chat-icon {
+    color: $color-white !important;
+    margin-left: 5px;
+}
+
+
+
+.header {
+    align-items: center;
+    display: flex;
+    height: 60px;
+    width: 100%;
+
+    i {
+        align-items: center;
+        color: $color-dark-pink;
+    }
+}
+
+
+
+.header-left {
+    background-color: $color-light-pink;
+    display: flex;
+    align-items: center;
+    color: $color-white;
+    height: 100%;
+    width: 80%;
+}
+
+.header-right {
+    background-color: $color-white;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    justify-content: center;
+    padding: 0 10px;
+    width: 20%;
+}
+
+.room-title {
+    font-size: 1.5rem;
+    margin-left: 10px;
+    text-transform: uppercase;
+}

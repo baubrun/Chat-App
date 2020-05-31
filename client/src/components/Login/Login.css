@@ -1,9 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap");
-.chat-container {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+.login-container {
+  background-color: #fff;
+  height: 50vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -11,36 +10,31 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 100vh;
+  margin: 0 auto;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
 
-.container {
-  background-color: #E26D5C;
-  border: 2px solid #E26D5C;
+.login-title {
+  color: 353535;
+  font-family: "Raleway", sans-serif;
+  font-size: 3em;
+  letter-spacing: 1px;
+}
+
+#login-form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 70%;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  width: 70%;
+  width: 45%;
 }
 
-.main {
-  background-color: whitesmoke;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 3fr;
-      grid-template-columns: 1fr 3fr;
-  height: 60%;
-  width: 100%;
+#login-form input {
+  font-size: 18px;
+  padding: 10px;
 }
-/*# sourceMappingURL=Chat.css.map */
+/*# sourceMappingURL=Login.css.map */

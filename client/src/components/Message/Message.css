@@ -1,67 +1,79 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap");
 .msg-bubble {
-    background: #F3F3F3;
-    border-radius: 20px;
-    padding: 5px 20px;
-    color: white;
-    display: inline-block;
-    max-width: 80%;
+  background: #F3F3F3;
+  border-radius: 20px;
+  padding: 5px 20px;
+  color: 353535;
+  display: inline-block;
+  max-width: 80%;
 }
 
 .current-user {
-    background: #E26D5C;
+  background: #E26D5C;
 }
 
 .msg-text {
-    float: left;
-    font-size: 1.1em;
-    letter-spacing: 0;
-    word-wrap: break-word;
-    width: 100%;
-}
-
-.msg-text img {
-    vertical-align: middle;
+  float: left;
+  font-size: 1.1em;
+  letter-spacing: 0;
+  word-wrap: break-word;
+  width: 100%;
 }
 
 .msg-container {
-    display: flex;
-    justify-content: flex-end;
-    padding: 0 5%;
-    margin-top: 3px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding: 0 5%;
+  margin-top: 3px;
 }
 
 .msg-sent {
-    display: flex;
-    align-items: center;
-    font-family: Helvetica;
-    color: #828282;
-    letter-spacing: 0.3px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: Helvetica;
+  color: #828282;
+  letter-spacing: 0.3px;
 }
 
 .msg-left {
-    justify-content: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin-bottom: 2px;
 }
 
 .msg-right {
-    justify-content: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 .msg-current-color {
-    color: white;
+  color: whitesmoke;
 }
 
 .msg-other-color {
-    color: #353535;
+  color: 353535;
 }
 
 .pl-10 {
-    padding-left: 10px;
+  padding-left: 10px;
 }
 
 .pr-10 {
-    padding-right: 10px;
+  padding-right: 10px;
 }
 
 .other-user {
-    border: 1px solid #E26D5C;
+  border: 1px solid #E26D5C;
 }
+/*# sourceMappingURL=Message.css.map */

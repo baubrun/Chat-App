@@ -1,22 +1,25 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap");
 .form {
-    display: flex;
-    border-top: 2px solid #E26D5C;
-    width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-top: 2px solid #E26D5C;
+  width: 100%;
 }
 
 .form input {
-    border: none;
-    font-size: 1.2em;
-    padding: 20px;
-    width: 85%;
+  border: none;
+  font-size: 1.2em;
+  padding: 20px;
+  width: 85%;
 }
-
 
 .send-btn {
-    background-color: #EE9986;
-    border: none;
-    color: whitesmoke;
-    cursor: pointer;
-    width: 15%;
+  background-color: #E26D5C;
+  border: none;
+  color: whitesmoke;
+  cursor: pointer;
+  width: 15%;
 }
-
+/*# sourceMappingURL=UserInput.css.map */

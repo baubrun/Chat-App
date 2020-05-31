@@ -1,0 +1,17 @@
+@import "../../scss/variables.scss";
+
+.sidebar {
+    background-color: $color-light-pink;
+    color: $color-white;
+    text-align: center;
+    height: 100%;
+}
+
+
+.sidebar-content {
+    margin-top: 10px;
+}
+
+.users-icon {
+    color: $color-white;
+}

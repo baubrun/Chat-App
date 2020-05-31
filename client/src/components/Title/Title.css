@@ -1,7 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap");
-body {
-  background-color: #020202c9;
-  font-family: "Roboto", sans-serif;
+.join-chat-title {
+  color: whitesmoke;
+  font-family: "Raleway", sans-serif;
+  font-size: 3em;
+  letter-spacing: 1PX;
 }
-/*# sourceMappingURL=App.css.map */
+/*# sourceMappingURL=Title.css.map */

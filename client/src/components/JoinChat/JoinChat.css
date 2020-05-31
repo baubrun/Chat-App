@@ -1,46 +1,101 @@
-.button {
-    border: none;
-    background: #E26D5C;
-    color: whitesmoke !important;
-    border-radius: 5px;
-    font-size: 1.2em;
-    font-weight: bold;
-    padding: 20px;
-    text-transform: uppercase;
-    text-decoration: none;
-    width: 100%;
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap");
+.chat-container {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
+.container {
+  background-color: #E26D5C;
+  border: 2px solid #E26D5C;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 70%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 70%;
+}
 
 .join-chat {
-    border-radius: 0;
-    padding: 15px 20px;
-    text-align: center;
-    width: 60%;
-}
-
-
-.join-chat-container
-{
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    justify-content: center;
-}
-
-
-.join-chat::placeholder {
-    font-size: 1.2rem;
+  border-radius: 0;
+  padding: 15px 20px;
+  text-align: center;
+  width: 60%;
 }
 
 .join-chat input {
-    border-color: #E26D5C;
-    font-size: 1.2em;
+  border-color: #E26D5C;
+  font-size: 1.2em;
+}
+
+.join-chat button {
+  border: none;
+  background: #E26D5C;
+  color: whitesmoke !important;
+  border-radius: 5px;
+  font-size: 1.2em;
+  font-weight: bold;
+  padding: 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.join-chat-container {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.join-chat::-webkit-input-placeholder {
+  font-size: 1.2rem;
+}
+
+.join-chat:-ms-input-placeholder {
+  font-size: 1.2rem;
+}
+
+.join-chat::-ms-input-placeholder {
+  font-size: 1.2rem;
+}
+
+.join-chat::placeholder {
+  font-size: 1.2rem;
+}
+
+#join-chat-title {
+  color: whitesmoke;
 }
 
 .mt-20 {
-    margin-top: 20px;
+  margin-top: 20px;
 }
-
-
+/*# sourceMappingURL=JoinChat.css.map */

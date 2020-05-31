@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "ACAA,OAAO,CAAC,kEAAI;AACZ,OAAO,CAAC,6EAAI",
+    "sources": [
+        "Form.scss",
+        "../../scss/variables.scss"
+    ],
+    "names": [],
+    "file": "Form.css"
+}

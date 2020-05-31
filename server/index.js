@@ -5,20 +5,73 @@ const app = express();
 const server = http.createServer(app);
 const io = socketio(server);
 const router = require("./router");
-const { addUser, getUser, getUsersInChatRoom, removeUser } = require("./users");
+const {
+  addUser,
+  getUser,
+  getUsersInChatRoom,
+  removeUser
+} = require("./users");
+const passport = require("passport")
+const cookieParser = require("cookie-parser")
+const session = require("express-session")
+require("dotenv").config()
+const mysql = require("mysql")
+const multer = require("multer")
+const upload = multer()
+
+
+
+
+
 
 /*==============
 Middleware
 ===============*/
 app.use(router);
+app.use(cookieParser())
+app.use(session({
+  secret: "library",
+  resave: false,
+  saveUninitialized: true,
+}))
+require("./config/passport")(app)
+
+
+
+/*==============
+DB
+===============*/
+const db = mysql.createConnection({
+  host: "localhost",
+  password: process.env.MYSQL_KEY,
+  database: "onparle",
+  user: "root"
+})
+
+db.connect((err) => {
+  if (!err) {
+    console.log("\n Connected to DB!\n")
+  } else {
+    console.log("DB connection failed. " + JSON.stringify(err))
+  }
+})
+
+
+
 
 /*==============
 Sockets
 ===============*/
 
 io.on("connection", (socket) => {
-  socket.on("joinChat", ({ chatRoom, name }, cb) => {
-    const { error, user } = addUser({
+  socket.on("joinChat", ({
+    chatRoom,
+    name
+  }, cb) => {
+    const {
+      error,
+      user
+    } = addUser({
       chatRoom,
       id: socket.id,
       name,
@@ -61,7 +114,7 @@ io.on("connection", (socket) => {
 
   socket.on("disconnect", () => {
     const user = removeUser(socket.id);
-    
+
     if (user) {
       io.to(user.chatRoom).emit("message", {
         user: "Admin",
@@ -77,6 +130,26 @@ io.on("connection", (socket) => {
 
   });
 });
+
+
+/*==============
+GET
+===============*/
+
+app.get("/", upload.none(), (req, res) => {
+  const {
+    username,
+    password
+  } = req.body
+  db.query("INSERT INTO users (username, password) values (?,?)", [username, password], (err, rows) => {
+    if (!err) {
+      console.log(rows)
+    } else {
+      console.log(err)
+    }
+  })
+})
+
 
 /*==============
 Server

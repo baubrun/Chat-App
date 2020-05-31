@@ -1,0 +1,34 @@
+@import "../../scss/variables.scss";
+
+
+
+.login-container {
+    background-color: #fff;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+
+
+.login-title {
+    color: $color-msg-color;
+    font-family: $raleway-font;
+    font-size: 3em;
+    letter-spacing: 1px;
+}
+
+
+#login-form {
+    display: flex;
+    justify-content: space-between;
+    width: 45%;
+
+    input {
+        font-size: 18px;
+        padding: 10px;
+
+    }
+}
