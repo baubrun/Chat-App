@@ -3,47 +3,40 @@ import { Title } from "../Title";
 import { Button } from "../Button";
 import "./JoinChat.css";
 import { FormInput } from "../FormInput";
-import {useHistory} from "react-router-dom"
+import { useHistory } from "react-router-dom";
 
 const JoinChat = () => {
-  // const [name, setName] = useState("");
-  // const [chatRoom, setChatRoom] = useState("");
-  let history = useHistory()
-  const [form, setForm] = useState({
-    name: "",
-    chatRoom: "",
-  });
-
-  const handleChange = (event) => {
-    const name = event.target.name;
-    const value = event.target.value;
-    setForm({ ...form, [name]: value });
-  };
+  const [name, setName] = useState("");
+  const [chatRoom, setChatRoom] = useState("");
+  let history = useHistory();
 
   const handleSubmit = (event) => {
-    event.preventDefault();
-    // setForm({ ...form, ["name"]: "", ["chatRoom"]: "" });
-    history.push(`/chat?name=${form.name}&chatRoom=${form.chatRoom}`);
+    if (!chatRoom || !name) {
+      return event.preventDefault();
+    } else {
+      history.push(`/chat?name=${name}&chatRoom=${chatRoom}`);
+    }
   };
 
   return (
     <div className="join-chat-container">
       <Title id="join-chat-title" text="ON PARLE" />
-      <form onSubmit={handleSubmit}>
+      <form className="join-chat-form" onSubmit={handleSubmit}>
         <FormInput
+          id="form-input"
           name="name"
-          // onChange={(event) => handleChange(event)}
-          onChange={handleChange}
+          onChange={(event) => setName(event.target.value)}
           placeholder="Username"
           type="text"
-          value={form.name}
+          value={name}
         />
         <FormInput
+          id="form-input"
           name="chatRoom"
-          onChange={handleChange}
-          placeholder="Password"
+          onChange={(event) => setChatRoom(event.target.value)}
+          placeholder="Chat Room"
           type="text"
-          value={form.chatRoom}
+          value={chatRoom}
         />
         <Button type="submit" value="Join Chat" />
       </form>

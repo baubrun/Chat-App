@@ -4,7 +4,7 @@
   background: #F3F3F3;
   border-radius: 20px;
   padding: 5px 20px;
-  color: 353535;
+  color: #353535;
   display: inline-block;
   max-width: 80%;
 }
@@ -62,7 +62,7 @@
 }
 
 .msg-other-color {
-  color: 353535;
+  color: #353535;
 }
 
 .pl-10 {

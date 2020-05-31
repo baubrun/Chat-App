@@ -4,63 +4,32 @@ const http = require("http");
 const app = express();
 const server = http.createServer(app);
 const io = socketio(server);
-const router = require("./router");
 const pino = require("pino")
 const expressPino = require("express-pino-logger")
-const logger = pino({level: process.env.LOG_LEVEL || "info"})
-const expressLogger = expressPino({ logger})
+const logger = pino({
+    level: process.env.LOG_LEVEL || "info"
+})
+const expressLogger = expressPino({
+    logger
+})
+
 const {
   addUser,
   getUser,
   getUsersInChatRoom,
   removeUser
 } = require("./users");
-const passport = require("passport")
-const cookieParser = require("cookie-parser")
-const session = require("express-session")
-require("dotenv").config()
-const mysql = require("mysql")
-const multer = require("multer")
-const upload = multer()
 
 
 
-
+const router = require("./router");
 
 
 /*==============
 Middleware
 ===============*/
 app.use(router);
-app.use(cookieParser())
-app.use(session({
-  secret: "library",
-  resave: false,
-  saveUninitialized: true,
-}))
-require("./config/passport")(app)
 app.use(expressLogger)
-
-
-/*==============
-DB
-===============*/
-const db = mysql.createConnection({
-  host: "localhost",
-  password: process.env.MYSQL_KEY,
-  database: "onparle",
-  user: "root"
-})
-
-db.connect((err) => {
-  const logMsg = "DB Connection."
-  if (!err) {
-    logger.info(logMsg)
-  } else {
-    console.info(err, logMsg)
-  }
-})
-
 
 
 
@@ -130,50 +99,12 @@ io.on("connection", (socket) => {
         chatRoom: user.chatRoom,
         users: getUsersInChatRoom(user.chatRoom),
       });
-
     }
-
   });
 });
 
 
-/*==============
-GET===============*/
 
-app.get("/", upload.none(), (req, res) => {
-  const {
-    username,
-    password
-  } = req.body
-  // const logMsg = "INSERT INTO users"
-  // db.query("INSERT INTO users (username, password) values (?,?)", [username, password], (err, rows) => {
-  //   if (!err) {
-  //     logger.info(rows, logMsg)
-  //   } else {
-  //     logger.info(logMsg)
-  //   }
-  // })
-  console.log(username, password)
-})
-
-/*==============
-POST
-===============*/
-
-app.post("/", upload.none(), (req, res) => {
-  const {
-    username,
-    password
-  } = req.body
-  const logMsg = "INSERT INTO users"
-  db.query("INSERT INTO users (username, password) values (?,?)", [username, password], (err, rows) => {
-    if (!err) {
-      logger.info(rows, logMsg)
-    } else {
-      logger.info(logMsg)
-    }
-  })
-})
 
 
 /*==============
@@ -182,3 +113,5 @@ Server
 const PORT = process.env.PORT || 4000;
 
 server.listen(PORT, () => logger.info(`Server running on port ${PORT}!\n`));
+
+

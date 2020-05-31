@@ -1,26 +1,24 @@
-import React from 'react'
+import React from "react";
+import "./FormInput"
 
 const FormInput = ({
-    id,
-    name,
-    onChange,
-    placeholder,
-    type,
-    value,
-
+  name,
+  onChange,
+  placeholder,
+  type,
+  value,
 }) => {
-  return(
+  return (
     <>
-    <input 
-      id={id}
-      name={name}
-      onChange={onChange}
-      placeholder={placeholder}
-      type={type}
-      value={value}
-    />
+      <input 
+        name={name}
+        onChange={onChange}
+        placeholder={placeholder}
+        type={type}
+        value={value}
+      />
     </>
-  )
-}
+  );
+};
 
-export default FormInput
+export default FormInput;

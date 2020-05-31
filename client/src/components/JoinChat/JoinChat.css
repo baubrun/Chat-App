@@ -1,22 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap");
-.chat-container {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  height: 100vh;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
 .container {
   background-color: #E26D5C;
   border: 2px solid #E26D5C;
@@ -34,28 +17,56 @@
   width: 70%;
 }
 
-.join-chat {
+.join-chat-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   border-radius: 0;
-  padding: 15px 20px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   text-align: center;
   width: 60%;
 }
 
-.join-chat input {
+.join-chat-form input {
   border-color: #E26D5C;
-  font-size: 1.2em;
+  font-size: 18px;
+  margin: 10px 0;
+  padding: 10px;
 }
 
-.join-chat button {
+.join-chat-form button {
   border: none;
   background: #E26D5C;
-  color: whitesmoke !important;
+  color: whitesmoke;
   border-radius: 5px;
   font-size: 1.2em;
   font-weight: bold;
+  margin-top: 10px;
   padding: 20px;
   text-transform: uppercase;
-  text-decoration: none;
+}
+
+.join-chat-form ::-webkit-input-placeholder {
+  font-size: 1.2em;
+  text-align: center;
+}
+
+.join-chat-form :-ms-input-placeholder {
+  font-size: 1.2em;
+  text-align: center;
+}
+
+.join-chat-form ::-ms-input-placeholder {
+  font-size: 1.2em;
+  text-align: center;
+}
+
+.join-chat-form ::placeholder {
+  font-size: 1.2em;
+  text-align: center;
 }
 
 .join-chat-container {
