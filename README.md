@@ -2,6 +2,5 @@
 
 Technologies: Express/Node/React/Socket.IO
 
-Demo: https://youtu.be/BT1m2HGllGw
+Demo: https://5ed538348db2b82c64dbd90e--adoring-hopper-ca21af.netlify.app
 
-To run project: cd into server directory and enter npm run dev
